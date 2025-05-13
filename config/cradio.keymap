@@ -720,9 +720,9 @@
         dwm_layer {
             display-name = "DWM";
             bindings = <
-            &dwm_send_nscreen  &dwm_layout_bstack  &dwm_layout_monocle    &dwm_layout_tile         &trans     &dwm_term      &trans        &dwm_run        &dwm_close    
-            &trans             &trans              &trans                 &dwm_focus_nscreen       &dwm_swap  &dwm_tag_one   &dwm_tag_two  &dwm_tag_three  &dwm_tag_four
-            &trans             &trans              &dwm_dec_master_count  &dwm_inc_master_count    &trans     &dwm_tag_five  &dwm_tag_six  &dwm_tag_seven  &dwm_tag_eight
+            &trans  &dwm_send_nscreen  &dwm_layout_bstack  &dwm_layout_monocle    &dwm_layout_tile         &trans     &dwm_term      &trans        &dwm_run        &dwm_close    
+            &trans  &trans             &trans              &trans                 &dwm_focus_nscreen       &dwm_swap  &dwm_tag_one   &dwm_tag_two  &dwm_tag_three  &dwm_tag_four
+            &trans  &trans             &trans              &dwm_dec_master_count  &dwm_inc_master_count    &trans     &dwm_tag_five  &dwm_tag_six  &dwm_tag_seven  &dwm_tag_eight
             &trans  &mo 7    &dwm_prev &dwm_next
             >;
         };
