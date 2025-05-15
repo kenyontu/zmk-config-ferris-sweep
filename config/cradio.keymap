@@ -364,7 +364,47 @@
                     , <&macro_release &kp LALT>
                     ;
         };
-        
+
+        hypr_focus_up: hypr_focus_up {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LALT>
+                    , <&macro_tap &kp UP>
+                    , <&macro_release &kp LALT>
+                    ;
+        };
+
+        hypr_focus_right: hypr_focus_right {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LALT>
+                    , <&macro_tap &kp RIGHT>
+                    , <&macro_release &kp LALT>
+                    ;
+        };
+
+        hypr_focus_down: hypr_focus_down {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LALT>
+                    , <&macro_tap &kp DOWN>
+                    , <&macro_release &kp LALT>
+                    ;
+        };
+
+        hypr_focus_left: hypr_focus_left {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LALT>
+                    , <&macro_tap &kp LEFT>
+                    , <&macro_release &kp LALT>
+                    ;
+        };
+
         theway_edit: theway_edit {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -703,9 +743,9 @@
         dwm_layer {
             display-name = "DWM";
             bindings = <
-            &trans  &dwm_send_nscreen  &dwm_layout_bstack  &dwm_layout_monocle    &dwm_layout_tile         &trans     &dwm_term      &trans        &dwm_run        &dwm_close    
-            &trans  &trans             &trans              &trans                 &dwm_focus_nscreen       &dwm_swap  &dwm_tag_one   &dwm_tag_two  &dwm_tag_three  &dwm_tag_four
-            &trans  &trans             &trans              &dwm_dec_master_count  &dwm_inc_master_count    &trans     &dwm_tag_five  &dwm_tag_six  &dwm_tag_seven  &dwm_tag_eight
+            &trans  &dwm_send_nscreen  &dwm_layout_bstack  &dwm_layout_monocle    &dwm_layout_tile         &hypr_focus_left  &hypr_focus_down  &hypr_focus_up  &hypr_focus_right  &trans       
+            &trans  &trans             &trans              &trans                 &dwm_focus_nscreen       &dwm_swap         &dwm_tag_one      &dwm_tag_two    &dwm_tag_three     &dwm_tag_four
+            &trans  &trans             &trans              &dwm_dec_master_count  &dwm_inc_master_count    &trans            &dwm_tag_five     &dwm_tag_six    &dwm_tag_seven     &dwm_tag_eight
             &trans  &mo 7    &dwm_prev &dwm_next
             >;
         };
@@ -714,8 +754,8 @@
         dwm_alt_layer {
             display-name = "DWM ALT";
             bindings = <
-            &dwm_quit  &trans  &trans  &trans  &trans    &trans  &dwm_dec_msize    &dwm_inc_msize   &trans             &trans           
-            &trans     &trans  &trans  &trans  &trans    &trans  &dwm_to_tag_one   &dwm_to_tag_two  &dwm_to_tag_three  &dwm_to_tag_four
+            &dwm_quit  &trans  &trans  &trans  &trans    &trans  &dwm_term         &trans           &dwm_run           &dwm_close
+            j&trans     &trans  &trans  &trans  &trans    &trans  &dwm_to_tag_one   &dwm_to_tag_two  &dwm_to_tag_three  &dwm_to_tag_four
             &trans     &trans  &trans  &trans  &trans    &trans  &dwm_to_tag_five  &dwm_to_tag_six  &dwm_to_tag_seven  &dwm_to_tag_eight
             &trans  &trans    &trans &trans
             >;
