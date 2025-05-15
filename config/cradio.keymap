@@ -1,7 +1,7 @@
 // Copyright (c) 2022 The ZMK Contributors
 // SPDX-License-Identifier: MIT
 
-#define ZMK_POINTING_DEFAULT_MOVE_VAL 2500  // 600
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 600  // 600
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 20    // 10
 
 #include <behaviors.dtsi>
@@ -594,30 +594,6 @@
         };
 
     };
-
-    /*
-    keys {
-        compatible = "gpio-keys";
-        soft_off_gpio_key: soft_off_gpio_key {
-            gpios = <&gpio1 6 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
-        };
-    };
-    wakeup_scan: wakeup_scan {
-        compatible = "zmk,kscan-gpio-direct";
-        input-keys = <&soft_off_gpio_key>;
-        wakeup-source;
-    };
-    side_band_behavior_triggers: side_band_behavior_triggers {
-        compatible = "zmk,kscan-sideband-behaviors";
-        kscan = <&wakeup_scan>;
-        auto-enable;
-        wakeup-source;
-    };
-    soft_off_wakers {
-        compatible = "zmk,soft-off-wakeup-sources";
-        wakeup-sources = <&wakeup_scan>;
-    };
-    */
 };
 
 / {
@@ -645,6 +621,13 @@
             time-to-max-speed-ms = <40>;  // 500
             delay-ms = <0>;               // 10
         };
+
+        td0: tap_dance_0 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&lt ESC 1>, <&mo 9>;
+        };
     };
 
     keymap {
@@ -654,10 +637,10 @@
         default_layer {
             display-name = "DEFAULT";
             bindings = <
-            &lt 5 Q     &kp W       &kp E        &lt 6 R      &lt 8 T    &kp Y  &kp U        &kp I        &kp O       &kp P
-            &ht LGUI A  &ht LALT S  &ht LSHFT D  &ht LCTRL F  &kp G      &kp H  &ht RCTRL J  &ht RSHFT K  &ht RALT L  &ht RGUI SEMI
-            &kp Z       &kp X       &kp C        &kp V        &lt 9 B    &kp N  &kp M        &kp COMMA    &kp DOT     &kp FSLH
-            &kp ESC  &lt 1 SPACE    &mo 2  &kp BSPC
+            &lt 5 Q     &kp W       &kp E    &kp R  &lt 8 T    &kp Y  &kp U  &kp I      &kp O    &kp P
+            &ht LALT A  &ht LGUI S  &lt 6 D  &kp F  &kp G      &kp H  &kp J  &kp K      &kp L    &kp SEMI
+            &kp Z       &kp X       &kp C    &kp V  &lt 9 B    &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH
+            &td0  &ht LCTRL SPACE    &kp LSHFT  &lt 2 BSPC
             >;
         };
 
