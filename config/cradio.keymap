@@ -626,7 +626,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&lt ESC 1>, <&mo 9>;
+            bindings = <&lt 1 ESC>, <&mo 9>;
         };
     };
 
@@ -736,9 +736,9 @@
         mouse {
             display-name = "MOUSE";
             bindings = <
-            &none  &none  &none  &none  &none     &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &none
-            &none  &none  &none  &none  &none     &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &none
-            &none  &none  &none  &none  &trans    &none           &none           &none         &none            &none
+            &none  &none  &none  &none  &none     &msc SCRL_LEFT  &msc SCRL_DOWN   &msc SCRL_UP  &msc SCRL_RIGHT  &kp RC(W)
+            &none  &none  &none  &none  &none     &mmv MOVE_LEFT  &mmv MOVE_DOWN   &mmv MOVE_UP  &mmv MOVE_RIGHT  &none
+            &none  &none  &none  &none  &trans    &kp RC(T)       &kp RC(LS(TAB))  &kp RC(TAB)   &kp RA(LEFT)     &kp RA(RIGHT)
             &none  &none  &mkp LCLK  &mkp RCLK
             >;
         };
