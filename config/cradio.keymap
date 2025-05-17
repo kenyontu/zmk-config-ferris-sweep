@@ -704,7 +704,7 @@
                 &kp FSLH  &kp STAR  &kp MINUS  &kp PLUS  &kp COMMA    &kp COMMA  &kp N7  &kp N8  &kp N9  &kp N0
                 &none     &none     &none      &none     &kp SPACE    &kp EQUAL  &kp N4  &kp N5  &kp N6  &kp SEMI
                 &none     &none     &none      &none     &none        &none      &kp N1  &kp N2  &kp N3  &kp DOT
-                &trans  &trans      &mo 3  &kp BSPC
+                &trans  &trans    &kp COMMA  &blt 3 BSPC
             >;
         };
 
@@ -715,7 +715,7 @@
                 &theway_edit  &kp TILDE  &kp LBKT  &kp RBKT  &kp CARET    &kp UNDER  &kp LT    &kp SLASH  &kp GT   &kp DEL         
                 &theway_del   &kp GRAVE  &kp LPAR  &kp RPAR  &kp DLLR     &kp EQUAL  &kp LBRC  &kp RBRC   &kp SQT  &kp DQT          
                 &none         &kp EXCL   &kp AT    &kp HASH  &kp PRCNT    &kp AMPS   &kp BSLH  &kp PIPE   &none    &kp EN_C_CEDILLA
-                &trans  &blt 4 SPACE    &none  &kp BSPC 
+                &mo 4  &kp SPACE    &none  &trans
             >;
         };
 
@@ -723,9 +723,9 @@
         arrow_layer {
             display-name = "MOV";
             bindings = <
-                &none  &none  &kp PG_UP  &kp PG_DN  &none    &none     &kp HOME  &kp END  &none      &none 
-                &none  &none  &none      &none      &none    &kp LEFT  &kp DOWN  &kp UP   &kp RIGHT  &none
-                &none  &none  &none      &none      &none    &none     &none     &none    &none      &none
+                &none  &none  &kp PG_UP   &kp PG_DN  &none    &none     &kp HOME  &kp END  &none      &none 
+                &none  &none  &kp LSHIFT  &kp LCTRL  &none    &kp LEFT  &kp DOWN  &kp UP   &kp RIGHT  &none
+                &none  &none  &none       &none      &none    &none     &none     &none    &none      &none
                 &none  &none    &none  &kp BSPC 
             >;
         };
