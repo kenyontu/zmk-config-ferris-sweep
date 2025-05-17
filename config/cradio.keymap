@@ -655,7 +655,7 @@
         blt: layer_tap { 
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            lkflavor = "balanced";
+            flavor = "balanced";
             tapping-term-ms = <200>;
             bindings = <&mo>, <&kp>;
             display-name = "B-Layer-Tap";
